@@ -1,0 +1,33 @@
+{
+  "name": "outfunneltask",
+  "version": "1.0.0",
+  "description": "A service to compare contacts between Pipedrive and Mailchimp.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pipedrive",
+    "mailchimp",
+    "contact-comparison",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Melih Can AYDIN",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
