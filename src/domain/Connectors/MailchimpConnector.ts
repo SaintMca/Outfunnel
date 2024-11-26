@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getMailchimpContacts } from "../../domain/services/MailchimpService";
+import { getMailchimpContacts } from "../services/MailchimpService";
 import logger from "../../utils/Logger";
 
 const fetchMailchimpContacts = async (req: Request, res: Response) => {

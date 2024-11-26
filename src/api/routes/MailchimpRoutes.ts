@@ -1,5 +1,5 @@
 import express from "express";
-import { fetchMailchimpContacts } from "../../domain/Connectors/MailchimpConnector";
+import { fetchMailchimpContacts } from "../../domain/connectors/MailchimpConnector";
 
 const router = express.Router();
 
