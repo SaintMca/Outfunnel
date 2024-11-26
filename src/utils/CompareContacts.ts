@@ -1,4 +1,4 @@
-import { Contact } from "../models/Contact";
+import { Contact } from "../domain/models/Contact";
 
 const CompareContacts = (mailchimpContacts: Contact[], pipedriveContacts: Contact[]) => {
     // Filter contacts present only in Mailchimp

@@ -2,7 +2,7 @@ import axios from "axios";
 import dotenv from "dotenv";
 import { ContactFetcher } from "./ContactFetcher";
 import { Contact } from "../models/Contact";
-import logger from "../utils/Logger";
+import logger from "../../utils/Logger";
 
 dotenv.config();
 

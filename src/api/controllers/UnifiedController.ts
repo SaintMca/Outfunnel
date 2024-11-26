@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { UnifiedContactService } from "../services/UnifiedContactService";
-import logger from "../utils/Logger";
+import { UnifiedContactService } from "../../domain/services/UnifiedContactService";
+import logger from "../../utils/Logger";
 
 const unifiedContactService = new UnifiedContactService();
 
