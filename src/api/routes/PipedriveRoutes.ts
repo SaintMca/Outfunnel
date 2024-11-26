@@ -1,5 +1,5 @@
 import express from "express";
-import { fetchPipedriveContacts } from "../../domain/Connectors/PipedriveConnector";
+import { fetchPipedriveContacts } from "../../domain/connectors/PipedriveConnector";
 
 const router = express.Router();
 
