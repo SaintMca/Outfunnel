@@ -2,7 +2,7 @@ import request from "supertest";
 import { app } from "../../src/app"; // Import only the app
 import { getPipedriveContacts } from "../../src/domain/services/PipedriveService";
 
-jest.mock("../../src/services/PipedriveService");
+jest.mock("../../src/domain/services/PipedriveService");
 
 const mockContacts = [
   {

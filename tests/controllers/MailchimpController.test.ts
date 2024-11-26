@@ -1,8 +1,8 @@
 import request from "supertest";
 import { app } from "../../src/app";
-import { getMailchimpContacts } from "../../src/domain/services/MailchimpService";
+import { getMailchimpContacts } from "../../src/domain/services/MailchimpService"
 
-jest.mock("../../src/services/MailchimpService");
+jest.mock("../../src/domain/services/MailchimpService");
 
 const mockContacts = [
   {
