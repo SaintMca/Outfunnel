@@ -12,13 +12,11 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.get("/mailchimp/contacts", fetchMailchimpContacts); // Fetch Mailchimp contacts
-app.get("/pipedrive/contacts", fetchPipedriveContacts); // Fetch Pipedrive contacts
+app.get("/mailchimp/contacts", fetchMailchimpContacts);
+app.get("/pipedrive/contacts", fetchPipedriveContacts);
 
-// Unified endpoint for fetching contacts from any platform
 app.get("/contacts/:platform", fetchContacts);
 
-// Compare Mailchimp and Pipedrive contacts
 app.get("/compare-contacts", async (req, res) => {
     try {
         const mailchimpContacts = await getMailchimpContacts();
@@ -34,7 +32,4 @@ app.get("/compare-contacts", async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+export { app };
