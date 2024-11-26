@@ -1,6 +1,6 @@
 import { CompareContacts } from "./../../src/utils/CompareContacts";
 import { mockMailchimpContacts, mockPipedriveContacts } from "../mocks/contacts";
-import { Contact } from "../../src/models/Contact";
+import { Contact } from "../../src/domain/models/Contact";
 
 describe("CompareContacts", () => {
   it("should return contacts only in Mailchimp", () => {

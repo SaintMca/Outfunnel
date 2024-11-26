@@ -1,4 +1,4 @@
-import { Contact } from "./../../src/models/Contact";
+import { Contact } from "../../src/domain/models/Contact";
 
 export const mockMailchimpContacts: Contact[] = [
   {

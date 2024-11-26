@@ -1,6 +1,6 @@
 import request from "supertest";
 import { app } from "../../src/app"; // Import only the app
-import { getPipedriveContacts } from "../../src/services/PipedriveService";
+import { getPipedriveContacts } from "../../src/domain/services/PipedriveService";
 
 jest.mock("../../src/services/PipedriveService");
 

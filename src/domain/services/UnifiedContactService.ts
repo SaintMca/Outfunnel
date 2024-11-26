@@ -1,7 +1,7 @@
-import { ContactFetcher } from "./ContactFetcher";
-import { PipedriveFetcher } from "./PipedriveFetcher";
-import { MailchimpFetcher } from "./MailchimpFetcher";
-import { Contact } from "../models/Contact";
+import { ContactFetcher } from "../fetchers/ContactFetcher";
+import { PipedriveFetcher } from "../fetchers/PipedriveFetcher";
+import { MailchimpFetcher } from "../fetchers/MailchimpFetcher";
+import { Contact } from "../../domain/models/Contact";
 
 export class UnifiedContactService {
     private fetchers: Record<string, ContactFetcher>;

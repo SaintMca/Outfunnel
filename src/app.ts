@@ -1,11 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import { fetchMailchimpContacts } from "./controllers/MailchimpController";
-import { fetchPipedriveContacts } from "./controllers/PipedriveController";
-import { getMailchimpContacts } from "./services/MailchimpService";
-import { getPipedriveContacts } from "./services/PipedriveService";
+import { fetchMailchimpContacts } from "./api/controllers/MailchimpController";
+import { fetchPipedriveContacts } from "./api/controllers/PipedriveController";
+import { getMailchimpContacts } from "./domain/services/MailchimpService";
+import { getPipedriveContacts } from "./domain/services/PipedriveService";
 import { CompareContacts } from "./utils/CompareContacts";
-import { fetchContacts } from "./controllers/UnifiedController";
+import { fetchContacts } from "./api/controllers/UnifiedController";
 
 dotenv.config();
 

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { getPipedriveContacts } from "../services/PipedriveService";
-import logger from "../utils/Logger";
+import { getPipedriveContacts } from "../../domain/services/PipedriveService";
+import logger from "../../utils/Logger";
 
 // Controller to handle Pipedrive API contacts fetching
 const fetchPipedriveContacts = async (req: Request, res: Response) => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import logger from "../utils/Logger";
+import logger from "../../utils/Logger";
 
 dotenv.config();
 
