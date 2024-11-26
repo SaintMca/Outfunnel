@@ -1,16 +1,16 @@
 import { Request, Response } from "express";
-import { getMailchimpContacts } from "../../domain/services/MailchimpService";
-import { getPipedriveContacts } from "../../domain/services/PipedriveService";
+import { fetchContactsFromPlatform } from "../../domain/services/UnifiedContactService";
 import { CompareContacts } from "../../utils/CompareContacts";
 
 export const compareContacts = async (req: Request, res: Response) => {
   try {
-    
     // Fetch contacts from both platforms
-    const mailchimpContacts = await getMailchimpContacts();
-    const pipedriveContacts = await getPipedriveContacts();
+    const [mailchimpContacts, pipedriveContacts] = await Promise.all([
+      fetchContactsFromPlatform("mailchimp"),
+      fetchContactsFromPlatform("pipedrive"),
+    ]);
 
-    // Compare contacts using the utility function
+    // Compare contacts
     const result = CompareContacts(mailchimpContacts, pipedriveContacts);
 
     res.status(200).json(result);
