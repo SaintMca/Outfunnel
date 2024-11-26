@@ -19,7 +19,7 @@ const CompareContacts = (mailchimpContacts: Contact[], pipedriveContacts: Contac
             )
     );
 
-    return { mailchimpOnly, pipedriveOnly }; // Return comparison result
+    return { mailchimpOnly, pipedriveOnly };
 };
 
 export { CompareContacts };
