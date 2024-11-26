@@ -1,25 +1,14 @@
 import { Contact } from "../domain/models/Contact";
 
-const CompareContacts = (mailchimpContacts: Contact[], pipedriveContacts: Contact[]) => {
-    // Filter contacts present only in Mailchimp
-    const mailchimpOnly = mailchimpContacts.filter(
-        (mailchimpContact) =>
-            !pipedriveContacts.some(
-                (pipedriveContact) =>
-                    pipedriveContact.emailAddress === mailchimpContact.emailAddress
-            )
-    );
+export const CompareContacts = (contactsA: Contact[], contactsB: Contact[]) => {
+  const contactsAEmails = new Set(contactsA.map((contact) => contact.emailAddress));
+  const contactsBEmails = new Set(contactsB.map((contact) => contact.emailAddress));
 
-    // Filter contacts present only in Pipedrive
-    const pipedriveOnly = pipedriveContacts.filter(
-        (pipedriveContact) =>
-            !mailchimpContacts.some(
-                (mailchimpContact) =>
-                    mailchimpContact.emailAddress === pipedriveContact.emailAddress
-            )
-    );
+  const mailchimpOnly = contactsA.filter((contact) => !contactsBEmails.has(contact.emailAddress));
+  const pipedriveOnly = contactsB.filter((contact) => !contactsAEmails.has(contact.emailAddress));
 
-    return { mailchimpOnly, pipedriveOnly };
+  return {
+    mailchimpOnly,
+    pipedriveOnly,
+  };
 };
-
-export { CompareContacts };
