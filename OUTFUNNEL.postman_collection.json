@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ec9c1f70-496d-497b-9ebb-fd2c448813e1",
+		"name": "OUTFUNNEL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7978033"
+	},
+	"item": [
+		{
+			"name": "GetPipedriveContacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pipedrive/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pipedrive",
+						"contacts"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"https://api.pipedrive.com/v1/persons?api_token=YOUR_API_TOKEN\""
+			},
+			"response": []
+		},
+		{
+			"name": "GetMailchimpContracts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mailchimp/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mailchimp",
+						"contacts"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"https://api.pipedrive.com/v1/persons?api_token=YOUR_API_TOKEN\""
+			},
+			"response": []
+		},
+		{
+			"name": "CompareContacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/compare-contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"compare-contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContactFetcher",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
