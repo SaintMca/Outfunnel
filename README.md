@@ -1,10 +1,34 @@
-# Contact Comparison API
+
+![Node.js](https://img.shields.io/badge/Node.js-14.x-green)
+![Docker](https://img.shields.io/badge/Docker-Supported-blue)
+![Express](https://img.shields.io/badge/Express-4.x-lightgrey)
+![API](https://img.shields.io/badge/API-RESTful-red)
+
+# Contact Bridge API
 
 ## Introduction
 
 This project implements a backend API to compare contacts between multiple platforms (e.g., Mailchimp, Pipedrive). It fetches and compares contacts, identifying which contacts exist exclusively in one platform or the other. The project is designed to be scalable and extensible for integrating additional platforms in the future.
 
 I intentionally kept the Pipedrive and Mailchimp endpoints. They weren’t strictly necessary for the project since the compare-contacts endpoint would have been sufficient. However, I left them to allow debugging of individual platforms in case of any issues.
+
+---
+
+## Features
+1. **Seamless Third-Party Integration**
+   - Connects to leading platforms like **Mailchimp** (email marketing) and **Pipedrive** (CRM).  
+
+2. **Contact Comparison**
+   - Compares contacts across platforms to identify differences, enabling data consistency.
+
+3. **API-Driven Design**
+   - Clean, modular, and extensible API structure, making it easy to add new platforms like **HubSpot** or **Salesforce**.
+
+4. **Robust Error Handling**
+   - Provides descriptive error messages and ensures reliable integration with external APIs.
+
+5. **Dockerized Deployment**
+   - Simple deployment with Docker and Docker Compose.
 
 ---
 
@@ -190,3 +214,18 @@ http://localhost:3000
 ```bash
 docker-compose down
 ```
+
+
+## Built By
+**Melih Can Aydın**
+Connect with me on:  
+- [GitHub](https://github.com/melihcanaydin)  
+- [LinkedIn](https://www.linkedin.com/in/melihcanaydin/)  
+
+## Motivation
+The goal of this project is to showcase my ability to:
+- Integrate with widely-used third-party platforms like **Mailchimp** and **Pipedrive**.
+- Build scalable, modular backend systems that are ready for production use.
+- Solve common challenges like contact comparison and data synchronization across platforms.
+
+This project reflects real-world scenarios where businesses need efficient data synchronization between marketing and CRM tools.

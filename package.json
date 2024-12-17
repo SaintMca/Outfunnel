@@ -1,5 +1,5 @@
 {
-  "name": "outfunneltask",
+  "name": "contactbridge",
   "version": "1.0.0",
   "description": "A service to compare contacts between Pipedrive and Mailchimp.",
   "main": "server.ts",
